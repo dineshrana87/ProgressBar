@@ -35,6 +35,6 @@ Note:-2
         string script = "$(document).ready(function () { $('[id*=btnSubmit]').click(); });";
         ClientScript.RegisterStartupScript(this.GetType(), "load", script, true);
 Note:-2
-    We are used NORTHWND Database in this simple example so configure it for Run and test simple.cs and Simple.aspx.cs Page
+    We are used NORTHWND Database in this simple example so configure it for Run and test simple.cs and Simple.aspx.cs Pages
 
 
