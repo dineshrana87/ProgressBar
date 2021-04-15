@@ -1,0 +1,40 @@
+﻿
+Question :- How to Use ProgressBar Image loader when Page loads or does PostBack using ASP.Net
+
+Step 1:-
+    Below 3-Line Paste in the Header Section in your pages without any changes 
+
+    <link href="../../ProgressBar/ProgressBarStyle.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../ProgressBar/jquery_min_1.8.3.js"></script>
+                                    OR
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="../../ProgressBar/ProgressBarJavaScript.js"></script>
+
+Step 2:-
+    Below Line Paste after the </form> tag close in your .aspx pages without any changes 
+
+         <div class="loading" align="center">
+            Processing, please wait...<br />
+            <br />
+            <img src="../../ProgressBar/loader.gif" alt="" />
+        </div>
+
+Step 3:-
+    call the  ---> OnClientClick="javascript:ShowProgress()" <--- function any post back event which you want.
+
+
+Note:-1 
+    1. In your PC (Computer/Laptop) Internet should be working properly beacuse for Jquery CDN Link
+    2. Customize "Loading. Please wait." words accounding to you.
+
+Note:-2
+    If you want call the server side progressbar functionality use the below code in the Page load event
+
+
+        string script = "$(document).ready(function () { $('[id*=btnSubmit]').click(); });";
+        ClientScript.RegisterStartupScript(this.GetType(), "load", script, true);
+Note:-2
+    We are used NORTHWND Database in this simple example so configure it for Run and test simple.cs and Simple.aspx.cs Page
+
+
